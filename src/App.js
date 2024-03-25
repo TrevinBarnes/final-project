@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -60,3 +61,36 @@ function Users() {
     </div>
   );
 }
+*/
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand as={Link} to="/">React Router Bootstrap</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar>
+
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/contact" component={ContactPage} />
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
