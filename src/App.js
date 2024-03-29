@@ -66,9 +66,9 @@ function Users() {
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
+import HomePage from 'C:/Users/eatb1/final-project/src/pages/Home.js';
+import AboutPage from 'C:/Users/eatb1/final-project/src/pages/About.js';
+import ContactPage from './src/Pages/Contact.js';
 
 function App() {
   return (
